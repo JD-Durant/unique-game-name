@@ -5,7 +5,7 @@ export class sceneMenu extends Phaser.Scene {
   }
 
   create(){
-    var background =  this.add.image(0, 0, "mainmenu.png");
+    var background =  this.add.image(0, 0, "menuBG");
     background.setOrigin(0,0);
   }
 }
