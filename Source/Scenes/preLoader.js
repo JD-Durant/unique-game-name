@@ -5,10 +5,11 @@ export class preLoad extends Phaser.Scene {
   }
 
   preload(){
-    this.load.image("menuBG", 'https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/Background%20Asset.png')
+    this.load.image("menuBG", 'https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/Background%20Asset.png');
 
-    this.load.image("playButton", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/playoff.png")
-    this.load.image("returnButton", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/exitoff.png")
+    this.load.image("playButton", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/playoff.png");
+    this.load.image("returnButton", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/exitoff.png");
+    this.load.image("settingsButton", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/Settingsbutton.png")
   }
 
   create() {
