@@ -8,5 +8,7 @@ export class preLoad extends Phaser.Scene {constructor(){super("Loader");}
     this.load.image("settingsButton", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/Settingsbutton.png");
     this.load.image("exitButton", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/exitoff.png");
     this.load.image("gameGrid", "https://cdn.jsdelivr.net/gh/IProDurant/unique-game-name@master/Assets/images/maniaGrid.jpg");
+    this.load.image("note1", "https://cdn.jsdelivr.net/gh/IProDurant/unique-game-name@master/Assets/images/mania-note2H.png");
+    this.load.image("note2", "https://cdn.jsdelivr.net/gh/IProDurant/unique-game-name@master/Assets/images/mania-note1H.png");
   }
 }
