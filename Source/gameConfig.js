@@ -1,5 +1,4 @@
 import "phaser";
-
 import { sceneMenu } from './Scenes/mainMenu';
 import { preLoad } from './Scenes/preLoader';
 import { actualGame } from './Scenes/game';
