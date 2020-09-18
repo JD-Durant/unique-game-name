@@ -9,8 +9,7 @@ export class keys extends Phaser.Scene {constructor(){super("keyDetector");}
     keyJ.on('down', () => console.log("J has been pressed"));
     var keyK = this.input.keyboard.addKey('K');
     keyK.on('down', () => console.log("K has been pressed"));
-    }
-
+  }
   update(){
   }
 }
