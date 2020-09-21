@@ -1,14 +1,32 @@
 import "phaser";
+var note1, note2, note3, note4;
+
 export class actualGame extends Phaser.Scene {constructor(){super("game");}
   create(){
     var background =  this.add.image(0, 0, "backGround").setOrigin(0,0).setScale(2);
     this.scene.launch("keyDetector") //launches a scene in the background, this is how i will carry out any key detection
+    this.scene.launch("notes")
+    var grid = this.add.image(950, 475, "gameGrid").setScale(0.9);
+    note1 = this.add.image(800, -25, "note1").setScale(0.41); //it just works ok.
+    note2 = this.add.image(900, -25, "note2").setScale(0.41);
+    note3 = this.add.image(1000, -25, "note2").setScale(0.41);
+    note4 = this.add.image(1100, -25, "note1").setScale(0.41);
+  }
 
-    var grid = this.add.image(950, 455, "gameGrid").setScale(0.85);
-
-    var note1 = this.add.image(798, 100, "note1").setScale(0.4);
-    var note2 = this.add.image(898, 100, "note2").setScale(0.4);
-    var note3 = this.add.image(998, 100, "note2").setScale(0.4);
-    var note4 = this.add.image(1098, 100, "note1").setScale(0.4);
+  recordNote(note) {
+    var test = note.y;
+    console.log(test);
+  };
+  moveNote(note, speed) {
+    note.y += speed;        //updates the note position, requiring the specific note and then the speed at which the note will be travelling
+    if (note.y > 850)
+      note.y = -25;
+  }
+  update() {
+    this.moveNote(note1, 10)
+    this.moveNote(note2, 10)
+    this.moveNote(note3, 10)
+    this.moveNote(note4, 10)
+    this.recordNote(note1);
   }
 }
