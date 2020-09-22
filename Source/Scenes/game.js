@@ -14,10 +14,6 @@ export class actualGame extends Phaser.Scene {constructor(){super("game");}
     note4 = this.add.image(1100, -25, "note1").setScale(0.41);
   }
 
-  /*recordNote(note) {
-    var test = note.y;
-    console.log(test);
-  };*/
   moveNote(note, speed) {
     note.y += speed;        //updates the note position, requiring the specific note and then the speed at which the note will be travelling
     if (note.y > 850)
