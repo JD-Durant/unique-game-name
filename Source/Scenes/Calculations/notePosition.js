@@ -1,10 +1,9 @@
 import "phaser";
 import {note1} from '../game'
-export function inPosition(note, key)
 export class notePosition extends Phaser.Scene {constructor(){super("notes");}
   recordNote(note) {
     var position = note.y;
-    //console.log(position);
+    console.log(position);
   };
 
   inPosition(note, key) {
@@ -12,6 +11,7 @@ export class notePosition extends Phaser.Scene {constructor(){super("notes");}
   };
 
   update(){
-   // this.recordNote(note1);
+   this.recordNote(note1);
   };
+
 }
