@@ -1,7 +1,7 @@
 import "phaser";
 var note1, note2, note3, note4;
-export { note1 };
-
+export { note1, note2, note3, note4 };
+import {moveNote} from './Calculations/notePosition'
 export class actualGame extends Phaser.Scene {constructor(){super("game");}
   create(){
     var background =  this.add.image(0, 0, "backGround").setOrigin(0,0).setScale(2);
@@ -13,15 +13,16 @@ export class actualGame extends Phaser.Scene {constructor(){super("game");}
     note4 = this.add.image(1100, -25, "note1").setScale(0.41);
   }
 
-  moveNote(note, speed) {
+  /*moveNote(note, speed) {
     note.y += speed;        //updates the note position, requiring the specific note and then the speed at which the note will be travelling
     if (note.y > 850);
       note.y = -25;
-  };
+  };*/
+
   update() {
-    this.moveNote(note1, 10);
-    this.moveNote(note2, 10);
-    this.moveNote(note3, 10);
-    this.moveNote(note4, 10);
+    moveNote(note1, 13);
+    moveNote(note2, 5);
+    moveNote(note3, 6);
+    moveNote(note4, 9);
   };
 }

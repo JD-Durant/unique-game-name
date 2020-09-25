@@ -1,18 +1,14 @@
-import "phaser";
-import {note1} from '../game'
-export class notePosition extends Phaser.Scene {constructor(){super("notes");}
-
-  recordNote(note) {
-    var position = note.y;
-    console.log(position);
-  };
-
-  inPosition(note, key) {
-    console.log("Command Launched")
-  };
-
-  update(){
-   this.recordNote(note1);
-  };
-
+var position;
+function recordNote(note) {
+  position = note.y;
+};
+export function inPosition(note, key) {
+  recordNote(note);
+  console.log(position + " <- Position | Key -> " + key);
 }
+
+export function moveNote(note, speed) {
+    note.y += speed;        //updates the note position, requiring the specific note and then the speed at which the note will be travelling
+    if (note.y > 850);
+      note.y = -25;
+  };
