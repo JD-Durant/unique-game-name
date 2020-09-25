@@ -7,7 +7,7 @@ export class actualGame extends Phaser.Scene {constructor(){super("game");}
     var background =  this.add.image(0, 0, "backGround").setOrigin(0,0).setScale(2);
     this.scene.launch("keyDetector"); //launches a scene in the background, this is how i will carry out any key detection
     var grid = this.add.image(950, 475, "gameGrid").setScale(0.9);
-    note1 = this.add.image(800, -25, "note1").setScale(0.41); //it just works ok.
+    note1 = this.add.image(800, 600, "note1").setScale(0.41); //it just works ok.
     note2 = this.add.image(900, -25, "note2").setScale(0.41);
     note3 = this.add.image(1000, -25, "note2").setScale(0.41);
     note4 = this.add.image(1100, -25, "note1").setScale(0.41);
