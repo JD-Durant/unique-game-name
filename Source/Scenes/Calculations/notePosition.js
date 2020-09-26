@@ -10,7 +10,8 @@ export function inPosition(note, key) {
 };
 
 export function moveNote(note, speed) {
-    note.y += speed;     
-    if (note.y > 850);
-      note.y = -25;
+    note.y += speed;        //updates the note position, requiring the specific note and then the speed at which the note will be travelling
+    if (note.y > 775) {
+      note.y = -25 
   };
+}
