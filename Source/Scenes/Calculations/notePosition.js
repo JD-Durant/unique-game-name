@@ -7,6 +7,7 @@ function recordNote(note) {
 export function inPosition(note, key) {
   recordNote(note);
   console.log(position + " <- Position | Key -> " + key);
+  scoreCalc(position);
 };
 
 export function moveNote(note, speed) {
@@ -14,4 +15,16 @@ export function moveNote(note, speed) {
     if (note.y > 775) {
       note.y = -25 
   };
+}
+
+export function scoreCalc(position) {
+  if (position <= 775 && position >= 750) {
+    console.log("30")
+  } else if (position <= 750 && position >= 725) {
+    console.log("20")
+  } else if (position <= 725 && position >= 700) {
+    console.log("10")
+  } else {
+    console.log("early")
+  }
 }
