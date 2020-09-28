@@ -1,5 +1,4 @@
 var position;
-var score2 = 0
 import {scoreCalc} from './scoreCalculator'
 
 function recordNote(note) {position = note.y;};

@@ -1,6 +1,6 @@
 import {resetNote} from './notePosition'
 import {changeScore} from '../game'
-var score2 = 0
+var score2 = 0;
 
 export function scoreCalc(position, note) {
   if (position <= 860 && position >= 820){
