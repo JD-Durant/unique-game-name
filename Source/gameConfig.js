@@ -10,4 +10,4 @@ export var config = {
   width: 1890,  //very random but works well
   bakgroundColor: 0x000000,
   scene: [preLoad, sceneMenu, actualGame, keys]
-}
+};

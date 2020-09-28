@@ -11,5 +11,5 @@ export class sceneMenu extends Phaser.Scene {constructor(){super("mainMenu");}
 
     var exit = this.add.image(950, 650, 'exitButton').setScale(0.9).setInteractive();
     exit.on('pointerdown', () => window.close());
-  }
-}
+  };
+};
