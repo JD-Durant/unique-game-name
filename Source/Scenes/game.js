@@ -1,9 +1,7 @@
-import "phaser";
 var note1, note2, note3, note4;
 var score = 0
 var scoreText
 export { note1, note2, note3, note4};
-import {moveNote} from './Calculations/notePosition'
 import { song } from './Maps/firstMap'
 
 export function changeScore(scoreChange) { score = scoreChange };

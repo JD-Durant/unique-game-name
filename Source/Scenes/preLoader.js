@@ -1,4 +1,3 @@
-import "phaser";
 export class preLoad extends Phaser.Scene {constructor(){super("Loader");}
   preload(){
     this.load.image("backGround", 'https://cdn.jsdelivr.net/gh/IProDurant/unique-game-name@master/Assets/images/backgroundVersion13.png');

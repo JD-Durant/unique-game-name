@@ -1,4 +1,3 @@
-import "phaser";
 import { note1, note2, note3, note4 } from "../game";
 import { inPosition } from "./notePosition";
 export class keys extends Phaser.Scene {constructor() {super("keyDetector");}
@@ -11,5 +10,5 @@ export class keys extends Phaser.Scene {constructor() {super("keyDetector");}
     keyJ.on("down", () => inPosition(note3, "keyJ"));
     var keyK = this.input.keyboard.addKey("K");
     keyK.on("down", () => inPosition(note4, "keyK"));
-  }
-}
+  };
+};
