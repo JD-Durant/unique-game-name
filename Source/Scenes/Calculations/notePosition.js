@@ -12,7 +12,7 @@ export function inPosition(note, key) {
 };
 
 export function moveNote(note, speed) {
-  note.y += speed; //updates the note position, requiring the specific note and the speed at which the note will be travelling
+  note.y += speed;
   if (note.y > 900) {
     note.y = -25;
     console.log("Miss");
