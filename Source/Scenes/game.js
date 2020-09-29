@@ -4,6 +4,7 @@ var score = 0
 var scoreText
 export { note1, note2, note3, note4};
 import {moveNote} from './Calculations/notePosition'
+import { song } from './Maps/firstMap'
 
 export function changeScore(scoreChange) { score = scoreChange };
 
@@ -17,13 +18,10 @@ export class actualGame extends Phaser.Scene {constructor(){super("game");}
     note2 = this.add.image(900, -20, "note2").setScale(0.41);
     note3 = this.add.image(1000, -20, "note2").setScale(0.41);
     note4 = this.add.image(1100, -20, "note1").setScale(0.41);
+    song();
   };
 
   update() {
-    moveNote(note1, 10);
-    moveNote(note2, 8);
-    moveNote(note3, 6);
-    moveNote(note4, 11);
     scoreText.setText("Score : " + score)
   };
 };
