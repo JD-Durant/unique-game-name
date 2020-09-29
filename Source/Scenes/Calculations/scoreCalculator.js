@@ -31,4 +31,4 @@ export function scoreCalc(position, note) {
   } else if (position < 660) {
     console.log("early");
   }
-}
+};
