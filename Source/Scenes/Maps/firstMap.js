@@ -1,5 +1,6 @@
 import {moveNote} from '../Calculations/notePosition'
 import { note1, note2, note3, note4 } from "../game";
+var i = 0
 
 export async function song() {  //async allows me to use await, as await is a restricted word.
   moveNote(note1, 10); //possibly use event emitters?
