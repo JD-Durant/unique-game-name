@@ -1,7 +1,14 @@
 var position;
 import { scoreCalc } from "./scoreCalculator";
+var i = 0
 
-function recordNote(note) {position = note.y;};
+export function recordNote(note) {
+  position = note.y;
+  if (note.y > 900) {
+    note.y = -25;
+    console.log("Miss"); 
+  };
+};
 
 export function resetNote(note) {note.y = -25;};
 
@@ -12,12 +19,9 @@ export function inPosition(note, key) {
 };
 
 export function moveNote(note, speed) {
-  var target = 1000
-  var i = 0
-  while (i != target) {
-    note.y += speed;
-    if (note.y > 900) {
-      note.y = -25;
-      console.log("Miss");
-  }};
-};
+  note.y += speed;
+
+ // if (note.y > 900) {
+   // note.y = -25;
+   // console.log("Miss"); 
+  };
