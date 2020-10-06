@@ -3,7 +3,7 @@ var score = 0
 var scoreText
 export { note1, note2, note3, note4};
 import { song } from './Maps/firstMap'
-import { recordNote } from './Calculations/notePosition'
+import { moveNote } from './Calculations/notePosition'
 var counter = 0;
 
 export function changeScore(scoreChange) { score = scoreChange };
@@ -21,8 +21,11 @@ export class actualGame extends Phaser.Scene {constructor(){super("game");}
   };
 
   update() {
-    recordNote(note1)
+    moveNote(note1, 11)
+    moveNote(note2, 4)
+    moveNote(note3, 9)
+    moveNote(note4, 7)
     scoreText.setText("Score : " + score)
-    song();
+    //song();
   };
 };
