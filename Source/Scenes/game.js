@@ -17,10 +17,10 @@ export class actualGame extends Phaser.Scene {constructor(){super("game");}
     note2 = this.add.image(900, -20, "note2").setScale(0.41);
     note3 = this.add.image(1000, -20, "note2").setScale(0.41);
     note4 = this.add.image(1100, -20, "note1").setScale(0.41);
+    song();
   };
 
   update() {
     scoreText.setText("Score : " + score)
-      song();
   };
 };

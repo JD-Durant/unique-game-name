@@ -12,9 +12,12 @@ export function inPosition(note, key) {
 };
 
 export function moveNote(note, speed) {
-  note.y += speed;
-  if (note.y > 900) {
-    note.y = -25;
-    console.log("Miss");
-  };
+  var target = 1000
+  var i = 0
+  while (i != target) {
+    note.y += speed;
+    if (note.y > 900) {
+      note.y = -25;
+      console.log("Miss");
+  }};
 };
