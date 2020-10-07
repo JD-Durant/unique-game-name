@@ -3,7 +3,6 @@ import { scoreCalc } from "./scoreCalculator";
 var i = 0
 
 export function recordNote(note) {
-  position = note.y;
   if (note.y > 900) {
     note.y = -25;
     console.log("Miss"); 
@@ -20,7 +19,7 @@ export function inPosition(note, key) {
 
 export function moveNote(note, speed) {
   note.y += speed;
-  recordNote(note)
+  recordNote(note);
  // if (note.y > 900) {
    // note.y = -25;
    // console.log("Miss"); 
