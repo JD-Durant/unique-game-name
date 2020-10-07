@@ -1,7 +1,7 @@
 //Dependencies
 import "phaser";
 
-//Run the program
+//Run the progra
 
 import {config} from './Source/gameConfig';
 export var game = new Phaser.Game(config);
