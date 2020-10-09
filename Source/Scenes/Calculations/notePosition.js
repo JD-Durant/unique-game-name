@@ -1,6 +1,5 @@
 var position;
 import { scoreCalc } from "./scoreCalculator";
-var i = 0
 
 export function recordNote(note) {
   if (note.y > 900) {
