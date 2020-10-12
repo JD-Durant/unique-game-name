@@ -11,7 +11,7 @@ export function recordNote(note) {
 export function resetNote(note) {note.y = -25;};
 
 export function inPosition(note, key) {
-  recordNote(note);
+  position = note.y;
   scoreCalc(position, note);
   console.log(position + " <- Position | Key -> " + key);
 };
