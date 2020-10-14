@@ -1,6 +1,6 @@
 import { resetNote } from "./notePosition";
 import { changeScore } from "../game";
-import { changeHealth } from '../game';
+import { changeHealth } from "../game";
 
 export function scoreCalc(position, note) {
   if (position <= 860 && position >= 820) {
@@ -24,5 +24,6 @@ export function scoreCalc(position, note) {
   } else if (position <= 660 && position >= 600) {
     changeHealth(-10);
     resetNote(note);
-  } else if (position < 600) {}
+  } else if (position < 600) {
+  }
 }
