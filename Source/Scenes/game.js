@@ -12,6 +12,7 @@ export function changeHealth(healthChange) { health += healthChange };
 
 export class actualGame extends Phaser.Scene {constructor(){super("game");}
   create(){
+    health = 100;
     var background =  this.add.image(0, 0, "backGround").setOrigin(0,0).setScale(2);
     scoreText = this.add.text(10, 0, "Score : " + score, { fontFamily: 'Verdana', fontSize: 64, color: 'black' });
     healthText = this.add.text(10, 60, "Health : " + health, { fontFamily: 'Verdana', fontSize: 64, color: 'black' });
