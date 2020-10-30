@@ -31,8 +31,10 @@ export class actualGame extends Phaser.Scene {constructor(){super("game");}
       this.scene.stop("game");
       this.scene.stop("keyDetector");
       this.scene.start("gameOver");
-    }
-  }
+    } else if (currentHealth > 100) {
+      health = 100;
+    };
+  };
 
   update() {
     moveNote(note1, 11);
