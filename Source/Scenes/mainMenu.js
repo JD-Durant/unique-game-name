@@ -5,8 +5,8 @@ export class sceneMenu extends Phaser.Scene {constructor(){super("mainMenu");}
     var playButton = this.add.image(950, 250, "playButton").setScale(0.6).setInteractive();
     playButton.on('pointerdown', () => this.scene.start("game"));
 
-    var settings = this.add.image(950, 450, 'settingsButton').setScale(0.9).setInteractive(); //dont know why the scales are different but they match
-    settings.on('pointerdown', () => console.log("Also works")); //also change
+    var settings = this.add.image(950, 450, 'settingsButton').setScale(0.9).setInteractive();
+    settings.on('pointerdown', () => this.scene.start("settings"));
 
     var exit = this.add.image(950, 650, 'exitButton').setScale(0.9).setInteractive();
     exit.on('pointerdown', () => window.close());

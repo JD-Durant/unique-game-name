@@ -10,6 +10,7 @@ export class preLoad extends Phaser.Scene {constructor(){super("Loader");}
     this.load.image("note2", "https://cdn.jsdelivr.net/gh/IProDurant/unique-game-name@master/Assets/images/mania-note1H.png");
     this.load.image("gameover", "https://cdn.jsdelivr.net/gh/IProDurant/unique-game-name@master/Assets/images/gameOver.png");
     this.load.image("menuButton", "https://cdn.jsdelivr.net/gh/IProDurant/unique-game-name@master/Assets/images/menuButton.png");
+    this.load.image("resetButton", "https://cdn.jsdelivr.net/gh/IProDurant/unique-game-name@master/Assets/images/resetButton.png")
   };
   create(){
     this.scene.start("mainMenu");

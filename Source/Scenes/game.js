@@ -4,8 +4,8 @@ var scoreText;
 var health = 100;
 var healthText;
 export { note1, note2, note3, note4};
-import { song } from './Maps/firstMap';
 import { moveNote } from './Calculations/notePosition';
+import { changeFinalScore } from "./gameOver";
 
 export function changeScore(scoreChange) { score += scoreChange };
 export function changeHealth(healthChange) { health += healthChange };
@@ -13,6 +13,7 @@ export function changeHealth(healthChange) { health += healthChange };
 export class actualGame extends Phaser.Scene {constructor(){super("game");}
   create(){
     health = 100;
+    score = 0;
     var background =  this.add.image(0, 0, "backGround").setOrigin(0,0).setScale(2);
     scoreText = this.add.text(10, 0, "Score : " + score, { fontFamily: 'Verdana', fontSize: 64, color: 'black' });
     healthText = this.add.text(10, 60, "Health : " + health, { fontFamily: 'Verdana', fontSize: 64, color: 'black' });
@@ -26,8 +27,10 @@ export class actualGame extends Phaser.Scene {constructor(){super("game");}
 
    healthCheck(currentHealth) {                  //detects if health is lower than 0, will finish this scene and then start the gameover screen
     if (currentHealth < 0) {
-      this.scene.remove("game");
-      this.scene.launch("gameOver");
+      changeFinalScore(score);
+      this.scene.stop("game");
+      this.scene.stop("keyDetector");
+      this.scene.start("gameOver");
     }
   }
 
