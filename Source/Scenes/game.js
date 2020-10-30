@@ -23,6 +23,13 @@ export class actualGame extends Phaser.Scene {constructor(){super("game");}
     note4 = this.add.image(1100, -20, "note1").setScale(0.41);
   };
 
+   healthCheck(currentHealth) {                  //detects if health is lower than 0, will finish this scene and then start the gameover screen
+    if (currentHealth < 0) {
+      this.scene.remove("game");
+      this.scene.launch("gameOver");
+    }
+  }
+
   update() {
     moveNote(note1, 11);
     moveNote(note2, 4);
@@ -30,6 +37,6 @@ export class actualGame extends Phaser.Scene {constructor(){super("game");}
     moveNote(note4, 7);
     scoreText.setText("Score : " + score);
     healthText.setText("Health : " + health);
-    //song();
+    this.healthCheck(health);
   };
 };
