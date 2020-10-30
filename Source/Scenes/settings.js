@@ -1,3 +1,4 @@
+
 export class settings extends Phaser.Scene {constructor(){super("settings");}
 create(){
   var background =  this.add.image(0, 0, "backGround").setOrigin(0,0).setScale(2);

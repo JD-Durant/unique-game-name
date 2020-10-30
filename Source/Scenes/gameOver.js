@@ -15,4 +15,3 @@ create() {
   finalScore = 0; //This resets the score after dispalying it, ready for the next end screen
   }
 }
-

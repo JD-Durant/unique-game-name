@@ -1,4 +1,5 @@
 var note1, note2, note3, note4;
+var noteSpeed1, noteSpeed2, noteSpeed3, noteSpeed4;
 var score = 0;
 var scoreText;
 var health = 100;
@@ -12,6 +13,7 @@ export function changeHealth(healthChange) { health += healthChange };
 
 export class actualGame extends Phaser.Scene {constructor(){super("game");}
   create(){
+    noteSpeed1 = 11;
     health = 100;
     score = 0;
     var background =  this.add.image(0, 0, "backGround").setOrigin(0,0).setScale(2);
@@ -37,7 +39,7 @@ export class actualGame extends Phaser.Scene {constructor(){super("game");}
   };
 
   update() {
-    moveNote(note1, 11);
+    moveNote(note1, noteSpeed1);
     moveNote(note2, 4);
     moveNote(note3, 9);
     moveNote(note4, 7);
